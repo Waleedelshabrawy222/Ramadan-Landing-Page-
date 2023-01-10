@@ -1,0 +1,150 @@
+:root {
+  --light-color: #FBEDD2;
+  --dark-color: #101212;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 800px;
+  width: 100%;
+  background-color: #AE7C36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+}
+.container{
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  position: relative;
+}
+.container img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+@media (max-width:767px) {
+  .container img {
+    display: none;
+  }
+  .container {
+    background-image: linear-gradient(#111, #222);
+    
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  width: 80%;
+  margin: auto;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  list-style: none;
+  margin-right: 50px;
+}
+nav .logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--light-color);
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+nav ul li:not(last-of-type) {
+  padding: 7px 0;
+}
+.active {
+  color: var(--light-color);
+  padding: 6px 15px;
+  border: 1px solid #AE7C36;
+  border-radius: 20px;
+  background-color: #AE7C36;
+  font-size: 18px;
+  font-weight: 700;
+}
+nav ul li a:hover {
+  color: #ff1643;
+}
+@media (max-width:767px) {
+  body {
+    height: 600px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav .logo {
+    margin-bottom: 15px;
+  }
+  nav ul li {
+    margin-right: 20px;
+  }
+  nav ul li:last-of-type {
+    margin-right: 0px;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 60%;
+  width: 50%;
+  top: 50%;
+  transform: translateY(15%);
+  margin: 0 10%;
+}
+.content .text {
+  width: 100%;
+  margin: auto;
+}
+.content .text h1 {
+  color: var(--light-color);
+  margin-bottom: 15px;
+}
+.content .text p {
+  color: var(--light-color);
+  font-size: 18px;
+  position: relative;
+  margin-bottom: 21px;
+}
+.content .text .p::after {
+  content: "";
+  position: absolute;
+  background-color: #EFAA4B;
+  width: 250px;
+  height: 2px;
+  bottom: -11px;
+  left: 0;
+}
+.content .text span {
+  color: #EFAA4B;
+}
+.content .text .buttons {
+  margin-top: 40px;
+}
+.content .text .buttons .see {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width:767px) {
+  .content {
+    width: 95%;
+  }
+  .content .text .buttons:first-of-type {
+    margin-left: 25px;
+  }
+}
